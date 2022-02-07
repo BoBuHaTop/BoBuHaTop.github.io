@@ -1,0 +1,383 @@
+.navigation-menu{
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 90px;
+}
+
+.navigation-menu a{
+  margin-left: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: .3s linear;
+}
+
+.navigation-menu a:hover{
+  background: #fff;
+  color: #2f3640;
+  transform: scale(1.1);
+}
+
+.navigation-menu i{
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.home{
+  color: #ff6b6b;
+}
+
+.about{
+  color: #0abde3;
+}
+
+.works{
+  color: #feca57;
+}
+
+.team{
+  color: #5f27cd;
+}
+
+.contact{
+  color: #1dd1a1;
+}
+
+.menu-toggle-btn{
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: #fff;
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:700px) {
+  .menu-toggle-btn{
+    display: block !important;
+  }
+
+  .navigation-menu{
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .navigation-menu::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navigation-menu a{
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navigation-menu.active{
+    display: block;
+  }
+}
+
+.section-top{
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(f1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slide 10s infinite;
+}
+
+@keyframes slide {
+  0%{
+    background-image: url(f1.jpg);
+  }
+  33%{
+    background-image: url(f2.jpg);
+  }
+  67%{
+    background-image: url(f3.jpg);
+  }
+}
+
+.content{
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.content h1{
+  color: #767c8c;
+  font-size: 60px;
+  letter-spacing: 16px;
+}
+.content a{
+  background: #1d2126;
+  padding: 10px 24px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.content a:hover{
+  background: #fc145a;
+}
+
+p{
+  font-size: 20px;
+  padding: 10px;
+  line-height: 24px;
+}
+
+
+#bodyLog{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+border:0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 2px solid #2ecc71;
+padding: 14px 40px;
+outline: none;
+color: white;
+border-radius: 24px
+transition: 0.25s;
+cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+
+a:link {
+    color: #869fdb;
+   }
+  a:visited {
+    color: #869fdb;
+   }
+  a:hover {
+    color: #f58cab;
+   }
+  a:active {
+    color: #ff0;
+  }
+
+  .middle2{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 27%;
+    text-align: center;
+  }
+  .btn2{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+  }
+  .btn2 i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+  }
+  .btn2:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+  }
+  .btn2::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+  }
+  .btn2:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+  }
+  .middle3{
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 27%;
+    text-align: center;
+  }
+  .btn3{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+  }
+  .btn3 i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+  }
+  .btn3:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+  }
+  .btn3::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+  }
+  .btn2:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+  }
+  .middle4{
+    position: absolute;
+    top: 120%;
+    transform: translateY(-50%);
+    width: 27%;
+    text-align: center;
+  }
+  .btn4{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+  }
+  .btn4 i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+  }
+  .btn4:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+  }
+  .btn4::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+  }
+  .btn4:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+  }
+  @keyframes aaa {
+    0%{
+      left: -110%;
+      top: 90%;
+    }50%{
+      left: 10%;
+      top: -30%;
+    }100%{
+      top: -10%;
+      left: -10%;
+    }
+  }
+
+.contents {
+  margin: 0;
+  line-height: 0.7em;
+
+}
+
+#cher{
+margin-top: 90px;
+
+}
+
+#grisha{
+margin-top: 170px;
+
+}
+
+#text{
+  color: black;
+  font-family:Comic Sans MS;
+  }
